@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3633C2F82D48BAC60087BB4B /* SignupFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633C2F72D48BAC60087BB4B /* SignupFormModelValidatorTests.swift */; };
+		3633C2FC2D48D34E0087BB4B /* SignupFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633C2FB2D48D34E0087BB4B /* SignupFormModelValidator.swift */; };
+		3633C30F2D491E870087BB4B /* SignupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633C30E2D491E870087BB4B /* SignupConstants.swift */; };
+		365359F42D4D135400AB9959 /* SignupWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365359F32D4D135400AB9959 /* SignupWebServiceTests.swift */; };
+		365359F62D4D13F700AB9959 /* SignupWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365359F52D4D13F700AB9959 /* SignupWebService.swift */; };
+		365359F82D4D14E200AB9959 /* SignupFormRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365359F72D4D14E200AB9959 /* SignupFormRequestModel.swift */; };
+		365359FA2D4D16F700AB9959 /* SignupFormResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365359F92D4D16F700AB9959 /* SignupFormResponseModel.swift */; };
+		365359FC2D4D174800AB9959 /* SignupErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365359FB2D4D174800AB9959 /* SignupErrors.swift */; };
+		36686B222D51201C00D601F1 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36686B212D51201C00D601F1 /* MockURLProtocol.swift */; };
 		9490D3D323F3015900ABE2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D3D223F3015900ABE2F9 /* AppDelegate.swift */; };
 		9490D3D523F3015900ABE2F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D3D423F3015900ABE2F9 /* SceneDelegate.swift */; };
 		9490D3D723F3015900ABE2F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D3D623F3015900ABE2F9 /* ViewController.swift */; };
 		9490D3DA23F3015900ABE2F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490D3D823F3015900ABE2F9 /* Main.storyboard */; };
 		9490D3DC23F3015A00ABE2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9490D3DB23F3015A00ABE2F9 /* Assets.xcassets */; };
 		9490D3DF23F3015A00ABE2F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490D3DD23F3015A00ABE2F9 /* LaunchScreen.storyboard */; };
-		9490D3EA23F3015A00ABE2F9 /* PhotoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D3E923F3015A00ABE2F9 /* PhotoAppTests.swift */; };
-		9490D3F523F3063400ABE2F9 /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D3F423F3063400ABE2F9 /* UserModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3633C2F72D48BAC60087BB4B /* SignupFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidatorTests.swift; sourceTree = "<group>"; };
+		3633C2FB2D48D34E0087BB4B /* SignupFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidator.swift; sourceTree = "<group>"; };
+		3633C30E2D491E870087BB4B /* SignupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConstants.swift; sourceTree = "<group>"; };
+		365359F32D4D135400AB9959 /* SignupWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebServiceTests.swift; sourceTree = "<group>"; };
+		365359F52D4D13F700AB9959 /* SignupWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebService.swift; sourceTree = "<group>"; };
+		365359F72D4D14E200AB9959 /* SignupFormRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormRequestModel.swift; sourceTree = "<group>"; };
+		365359F92D4D16F700AB9959 /* SignupFormResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormResponseModel.swift; sourceTree = "<group>"; };
+		365359FB2D4D174800AB9959 /* SignupErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupErrors.swift; sourceTree = "<group>"; };
+		36686B212D51201C00D601F1 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		9490D3CF23F3015900ABE2F9 /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9490D3D223F3015900ABE2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9490D3D423F3015900ABE2F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +53,7 @@
 		9490D3DE23F3015A00ABE2F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9490D3E023F3015A00ABE2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9490D3E523F3015A00ABE2F9 /* PhotoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9490D3E923F3015A00ABE2F9 /* PhotoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppTests.swift; sourceTree = "<group>"; };
 		9490D3EB23F3015A00ABE2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9490D3F423F3063400ABE2F9 /* UserModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36535A002D4D183100AB9959 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3633C30E2D491E870087BB4B /* SignupConstants.swift */,
+				3633C2FB2D48D34E0087BB4B /* SignupFormModelValidator.swift */,
+				365359F72D4D14E200AB9959 /* SignupFormRequestModel.swift */,
+				365359F92D4D16F700AB9959 /* SignupFormResponseModel.swift */,
+				365359FB2D4D174800AB9959 /* SignupErrors.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36535A012D4D183100AB9959 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				36535A042D4D189A00AB9959 /* Network */,
+				36535A032D4D186E00AB9959 /* Controllers */,
+				36535A002D4D183100AB9959 /* Models */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		36535A032D4D186E00AB9959 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9490D3D623F3015900ABE2F9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36535A042D4D189A00AB9959 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				365359F52D4D13F700AB9959 /* SignupWebService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36535A052D4D18B600AB9959 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				36535A082D4D18CF00AB9959 /* Models */,
+				36535A072D4D18C700AB9959 /* Controllers */,
+				36535A062D4D18BF00AB9959 /* Network */,
+				36686B212D51201C00D601F1 /* MockURLProtocol.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		36535A062D4D18BF00AB9959 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				365359F32D4D135400AB9959 /* SignupWebServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36535A072D4D18C700AB9959 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36535A082D4D18CF00AB9959 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3633C2F72D48BAC60087BB4B /* SignupFormModelValidatorTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9490D3C623F3015900ABE2F9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +167,9 @@
 		9490D3D123F3015900ABE2F9 /* PhotoApp */ = {
 			isa = PBXGroup;
 			children = (
+				36535A012D4D183100AB9959 /* Signup */,
 				9490D3D223F3015900ABE2F9 /* AppDelegate.swift */,
 				9490D3D423F3015900ABE2F9 /* SceneDelegate.swift */,
-				9490D3D623F3015900ABE2F9 /* ViewController.swift */,
 				9490D3D823F3015900ABE2F9 /* Main.storyboard */,
 				9490D3DB23F3015A00ABE2F9 /* Assets.xcassets */,
 				9490D3DD23F3015A00ABE2F9 /* LaunchScreen.storyboard */,
@@ -95,9 +181,8 @@
 		9490D3E823F3015A00ABE2F9 /* PhotoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9490D3E923F3015A00ABE2F9 /* PhotoAppTests.swift */,
+				36535A052D4D18B600AB9959 /* Signup */,
 				9490D3EB23F3015A00ABE2F9 /* Info.plist */,
-				9490D3F423F3063400ABE2F9 /* UserModelTests.swift */,
 			);
 			path = PhotoAppTests;
 			sourceTree = "<group>";
@@ -155,6 +240,7 @@
 					};
 					9490D3E423F3015A00ABE2F9 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1610;
 						TestTargetID = 9490D3CE23F3015900ABE2F9;
 					};
 				};
@@ -205,6 +291,12 @@
 			files = (
 				9490D3D723F3015900ABE2F9 /* ViewController.swift in Sources */,
 				9490D3D323F3015900ABE2F9 /* AppDelegate.swift in Sources */,
+				365359FA2D4D16F700AB9959 /* SignupFormResponseModel.swift in Sources */,
+				3633C2FC2D48D34E0087BB4B /* SignupFormModelValidator.swift in Sources */,
+				365359FC2D4D174800AB9959 /* SignupErrors.swift in Sources */,
+				3633C30F2D491E870087BB4B /* SignupConstants.swift in Sources */,
+				365359F82D4D14E200AB9959 /* SignupFormRequestModel.swift in Sources */,
+				365359F62D4D13F700AB9959 /* SignupWebService.swift in Sources */,
 				9490D3D523F3015900ABE2F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,8 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9490D3F523F3063400ABE2F9 /* UserModelTests.swift in Sources */,
-				9490D3EA23F3015A00ABE2F9 /* PhotoAppTests.swift in Sources */,
+				36686B222D51201C00D601F1 /* MockURLProtocol.swift in Sources */,
+				365359F42D4D135400AB9959 /* SignupWebServiceTests.swift in Sources */,
+				3633C2F82D48BAC60087BB4B /* SignupFormModelValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,8 +494,8 @@
 		9490D3F223F3015A00ABE2F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -411,6 +506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsdeveloperblog.PhotoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoApp.app/PhotoApp";
@@ -420,8 +516,8 @@
 		9490D3F323F3015A00ABE2F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
