@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SignupFormModelValidator {
+class SignupFormModelValidator: SignupModelValidatorProtocol {
     
     func isfFirstNameValid(firstName: String) -> Bool{
         
