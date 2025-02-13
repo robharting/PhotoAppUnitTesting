@@ -9,7 +9,7 @@
 import Foundation
 
 
-class SignupWebService {
+class SignupWebService: SignupWebServiceProtocol {
     
     private var urlSession: URLSession
     private var urlString: String
@@ -19,7 +19,7 @@ class SignupWebService {
         self.urlSession = urlSession
     }
     
-    func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupFormResponseModel?, SignupError?) -> Void) {
+    func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupResponseModel?, SignupError?) -> Void) {
         guard let url = URL(string: urlString) else {
             completionHandler(nil, SignupError.invalidRequestURLString)
             return
@@ -46,7 +46,7 @@ class SignupWebService {
             }
             
             
-            if let data = data, let signupResponseModel = try? JSONDecoder().decode(SignupFormResponseModel.self, from: data) {
+            if let data = data, let signupResponseModel = try? JSONDecoder().decode(SignupResponseModel.self, from: data) {
                 completionHandler(signupResponseModel, nil)
             } else {
                 completionHandler(nil, SignupError.invalidResponseModel)

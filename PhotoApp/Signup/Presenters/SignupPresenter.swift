@@ -11,16 +11,20 @@ import Foundation
 class SignupPresenter {
     
     private var formModelValidaor: SignupModelValidatorProtocol!
+    private var webservice: SignupWebServiceProtocol
+    private weak var delegate: SignupViewDelegateProtocol?
     
-    init(formModelValidaor: SignupModelValidatorProtocol) {
+    init(formModelValidaor: SignupModelValidatorProtocol, webservice: SignupWebServiceProtocol,  delegate: SignupViewDelegateProtocol) {
         self.formModelValidaor = formModelValidaor
+        self.webservice = webservice
+        self.delegate = delegate
         
     }
     
     func processUserSignup(formModel: SignupFormModel) {
         
         if !formModelValidaor.isfFirstNameValid(firstName: formModel.firstName) {
-            return 
+            return
         }
         
         if !formModelValidaor.isLastNameValid(lastName: formModel.lastName) {
@@ -38,7 +42,23 @@ class SignupPresenter {
         if !formModelValidaor.doPasswordsMatch(password: formModel.password, confirmPassword: formModel.password) {
             return
         }
+        
+        let requestModel = SignupFormRequestModel(firstName: formModel.firstName, lastName: formModel.lastName, email: formModel.email, password: formModel.password)
+        
+        
+        webservice.signup(withForm: requestModel) { [weak self] (responseModel, error) in
+            if let error = error {
+                self?.delegate?.errorHandler(error: error)
+                return
+            }
             
+            if let _ = responseModel {
+                self?.delegate?.successfulSignup()
+                return
+            }
+        }
+        
+        
         
     }
     
