@@ -17,13 +17,40 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     
+    var signupPresenter: SignupPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if signupPresenter == nil {
+            let signupModelValidator = SignupFormModelValidator()
+            let webservice = SignupWebService(urlString: SignupConstants.signupURLString)
+                        
+            signupPresenter = SignupPresenter(formModelValidaor: signupModelValidator, webservice: webservice, delegate: self)
+        }
     }
     
     @IBAction func signupButtonTapped(_ sender: Any) {
+        let signupFormModel = SignupFormModel(
+            firstName: firstNameTextField.text ?? "",
+            lastName: lastNameTextField.text ?? "",
+            email: emailTextField.text ?? "",
+            password: passwordTextField.text ?? "",
+            recordPassword: repeatPasswordTextField.text ?? "")
+        
+        signupPresenter?.processUserSignup(formModel: signupFormModel)
     }
     
     
+}
+
+extension SignupViewController : SignupViewDelegateProtocol {
+    func successfulSignup() {
+        // TODO
+    }
+    
+    func errorHandler(error: SignupError) {
+        // TODO
+    }
 }
