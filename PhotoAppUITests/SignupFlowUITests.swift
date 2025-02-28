@@ -67,7 +67,6 @@ final class SignupFlowUITests: XCTestCase {
     @MainActor
     func testViewController_WhenInvalidFormSubmitted_PresentErrorAlertDialog() {
         // Arrange
-        
         firstName.tap()
         firstName.typeText("S")
         
@@ -91,8 +90,32 @@ final class SignupFlowUITests: XCTestCase {
         //XCTAssertTrue(app.alerts["errorAlertDialog"].exists, "An Error Alert dialog was not presented when invalid signup form was submitted")
         // or use and waitforExistence instead
         XCTAssertTrue(app.alerts["errorAlertDialog"].waitForExistence(timeout: 1), "An Error Alert dialog was not presented when invalid signup form was submitted")
+    }
+    
+    @MainActor
+    func testViewController_WhenValidFormSubmitted_PresentSuccessAlertDialog() {
+        // Arrange
+        firstName.tap()
+        firstName.typeText("Rob")
+        
+        lastName.tap()
+        lastName.typeText("Harting")
+        
+        email.tap()
+        email.typeText("test@test.com")
+        
+        password.tap()
+        password.typeText("12345678")
+        
+        repeatPassword.tap()
+        repeatPassword.typeText("12345678")
         
         
+        // Act
+        signupButton.tap()
+        
+        // Assert
+        XCTAssertTrue(app.alerts["successAlertDialog"].waitForExistence(timeout: 3), "An Success Alert dialog was not presented when valid signup form was submitted")
     }
     
     @MainActor
