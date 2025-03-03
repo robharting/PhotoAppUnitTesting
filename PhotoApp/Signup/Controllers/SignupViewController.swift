@@ -9,7 +9,7 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -22,11 +22,30 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        #if DEBUG
+//        if CommandLine.arguments.contains("-skipSurvey") {
+//            print("Skipping survey page")
+//        }
+//        #endif
+//        
+//        #if DEBUG
+//        if ProcessInfo.processInfo.arguments.contains("-skipSurvey") {
+//            print("Skipping survey page")
+//        }
+//        #endif
+        
+        
+        
         
         if signupPresenter == nil {
             let signupModelValidator = SignupFormModelValidator()
-            let webservice = SignupWebService(urlString: SignupConstants.signupURLString)
-                        
+            
+            // add a launch environment value
+            let signupRUL = ProcessInfo.processInfo.environment["signupUrl"] ??
+                SignupConstants.signupURLString
+            
+            let webservice = SignupWebService(urlString: signupRUL)
+            
             signupPresenter = SignupPresenter(formModelValidaor: signupModelValidator, webservice: webservice, delegate: self)
         }
     }

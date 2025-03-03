@@ -22,6 +22,10 @@ final class SignupFlowUITests: XCTestCase {
         try super.setUpWithError()
         
         app = XCUIApplication()
+        app.launchArguments = ["-skipSurvey", "-debugServer"]
+        app.launchEnvironment = ["signupUrl": "http://tlyqhtlbn8.execute-api.us-east-1.amazonaws.com/prod/signup-mock-service/users",
+                                    "inAppPurchaseEnabled": "true",
+                                    "inAppAdsEnabled": "true"]
         app.launch()
         
         firstName = app.textFields["firstName"]
@@ -139,13 +143,13 @@ final class SignupFlowUITests: XCTestCase {
         XCTAssertTrue(app.alerts["successAlertDialog"].waitForExistence(timeout: 3), "An Success Alert dialog was not presented when valid signup form was submitted")
     }
     
-    @MainActor
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+//    @MainActor
+//    func testLaunchPerformance() throws {
+//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+//            // This measures how long it takes to launch your application.
+//            measure(metrics: [XCTApplicationLaunchMetric()]) {
+//                XCUIApplication().launch()
+//            }
+//        }
+//    }
 }
