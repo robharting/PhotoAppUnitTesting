@@ -23,9 +23,10 @@ final class SignupFlowUITests: XCTestCase {
         
         app = XCUIApplication()
         app.launchArguments = ["-skipSurvey", "-debugServer"]
-        app.launchEnvironment = ["signupUrl": "http://tlyqhtlbn8.execute-api.us-east-1.amazonaws.com/prod/signup-mock-service/users",
-                                    "inAppPurchaseEnabled": "true",
-                                    "inAppAdsEnabled": "true"]
+        // moved to test plan
+//        app.launchEnvironment = ["signupUrl": "http://tlyqhtlbn8.execute-api.us-east-1.amazonaws.com/prod/signup-mock-service/users",
+//                                    "inAppPurchaseEnabled": "true",
+//                                    "inAppAdsEnabled": "true"]
         app.launch()
         
         firstName = app.textFields["firstName"]
